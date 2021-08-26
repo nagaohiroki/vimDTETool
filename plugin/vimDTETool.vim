@@ -10,7 +10,7 @@ function! VSCmd(cmd)
 	execute 'term ++hidden DTETool ' . a:cmd
 endfunction
 function! VSFile(cmd)
-	execute 'term ++hidden DTETool ' . a:cmd . ' '. fnameescape(expand('%:p')) . ' ' . line('.') . ' ' . col('.')
+	execute 'term ++hidden DTETool ' . a:cmd . ' "'. expand('%:p') . '" ' . line('.') . ' ' . col('.')
 endfunction
 command! VSOpen call VSFile('OpenFile')
 command! VSBreakPoint call VSFile('BreakPoint')
