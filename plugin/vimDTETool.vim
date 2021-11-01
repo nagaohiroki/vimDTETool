@@ -7,10 +7,10 @@ function! VSAttach(cmd)
 	execute 'term ++hidden DTETool AttachProcess ' . a:cmd
 endfunction
 function! VSCmd(cmd)
-	execute 'term ++hidden DTETool ' . a:cmd
+	execute '!DTETool ' . a:cmd
 endfunction
 function! VSFile(cmd)
-	execute 'term ++hidden DTETool ' . a:cmd . ' "'. expand('%:p') . '" ' . line('.') . ' ' . col('.')
+	execute '!DTETool ' . a:cmd . ' "'. expand('%:p') . '" ' . line('.') . ' ' . col('.')
 endfunction
 function! OpenSln(targetpath)
 	let dirname = fnamemodify(a:targetpath, ':h')
