@@ -22,7 +22,7 @@ function! OpenSln(targetpath)
 		call OpenSln(dirname)
 	endif
 endfunction
-command! VSOpenSln call OpenSln(expand('%:p:h'))
+command! VSOpenSln call OpenSln(expand('%:p'))
 command! VSOpen call VSFile('OpenFile')
 command! VSBreakPoint call VSFile('BreakPoint')
 command! VSDeleteBreakPoint call VSCmd('DeleteBreakPoint')
